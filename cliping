@@ -1,0 +1,27 @@
+#include<stdio.h>
+int clipit(long int x){
+long int n;
+    int l=1;
+long int m=0;
+  while(x!=0){
+    n=x%10;
+    if(n!=9)
+      n++;
+    else
+      n=0;
+    m=m+n*l;
+      l=l*10;
+    x=x/10;
+
+  }
+  return m;
+
+}
+int main(){
+long int n;
+cin>>n;
+cout<<"number before cliping "<<n<<"\n";
+int x=clipit(n);
+cout<<"number after cliping  "<<x;
+   return 0;
+}
